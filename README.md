@@ -12,6 +12,6 @@ $ ./build_in_docker
 ```
 Afterwards, you'll find your SDLvncviewer and libraries in ```./build```
 
-If you need more files than the SDLvncviwere exported, update  ```./buildall``` which has a list at the bottom that it exports to a directory that  ```./build_on_docker``` mounts as ```./build```
+If you need more files than the SDLvncviewer exported, update  ```./buildall``` which has a list at the bottom that it exports to a directory that  ```./build_on_docker``` mounts as ```./build```
 
 Good luck!
