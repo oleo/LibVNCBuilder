@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /compile/LibVNCServer-0.9.12/ && mkdir -p build && cd build && cmake .. && cmake --build .
+
+
+
+

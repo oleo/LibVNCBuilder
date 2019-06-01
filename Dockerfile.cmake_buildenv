@@ -1,0 +1,16 @@
+FROM centos:7.6.1810
+MAINTAINER Ole Øyvind Hove <oleo@vanilla.no>
+
+RUN yum -y install zlib-devel libjpeg-turbo-devel wget gcc-c++ make automake autoconf libpng-devel gnutls-devel lzo-devel openssl-devel libgcrypt-devel
+
+RUN mkdir /build
+
+RUN cd /build && wget https://github.com/Kitware/CMake/releases/download/v3.14.5/cmake-3.14.5-Linux-x86_64.tar.gz && tar -zxvf cmake-3.14.5-Linux-x86_64.tar.gz && cd cmake-3.14.5-Linux-x86_64 && cp -rp * /usr/local/
+
+
+RUN mkdir /compile
+
+WORKDIR /compile
+
+
+

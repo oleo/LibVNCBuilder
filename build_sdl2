@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /compile/SDL2-2.0.9 && mkdir -p build && cd build && ../configure && make && make install
+

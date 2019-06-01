@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "`date` - Starting build_in_docker  ">./build/build.log
+#Build dockerimage
+docker build -t aspirantvncviewer . | tee -a ./build/build.log
+#run dockerimage and compile vncclient, place it in /lastbuild
+mkdir -p build | tee -a ./build/build.log 
+docker run --rm -ti -v `pwd`/build:/lastbuild aspirantvncviewer | tee -a ./build/build.log
+echo 
+echo ### Result can be seen in ./build : 
+echo 
+find ./build
+echo
+echo "====> FINISHED <======"
+echo
+
+
