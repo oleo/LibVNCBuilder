@@ -2,7 +2,8 @@
 ./build_sdl2 
 ./build_sdlvncviewer
 
-# gather binaries and place them in /lastbuild
+
+# List of files that we want to export after building inside docker-container is finished:
 mkdir -p /lastbuild/lib
 cp SDL2-2.0.9/build/build/.libs/libSDL2-2.0* /lastbuild/lib/
 cp LibVNCServer-0.9.12/build/client_examples/SDLvncviewer /lastbuild
